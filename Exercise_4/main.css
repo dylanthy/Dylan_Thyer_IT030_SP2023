@@ -1,0 +1,122 @@
+/* CSS Style Sheet for Exercise 4 */
+
+/**** Entire Body ****/
+body{
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 12px;	
+	color: black;
+}
+
+
+/**** Parent Box & Grid ****/
+.parentBox{
+	border: 1px solid #000;
+	max-width: 960px;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas:
+						"headingBox headingBox headingBox"
+						"largeBox largeBox numList"
+						"imageBox imageBox imageBox" 
+						"footerBox footerBox footerBox";
+}
+
+/**** Inner Boxes ****/
+
+/* Heading List Box */
+.headingBox{
+	grid-area: headingBox;
+	font-size: 30px;
+	padding: 5px;
+	margin: 6px;
+	border: 1px solid #000;
+	background-color: #eee;
+	height: 100px;
+	justify-content: start;
+}
+ul#headerList li{
+	display:inline;
+	margin-right: 15px;
+}
+
+/* Large Box */
+.largeBox{
+	grid-area: largeBox;
+	margin: 6px;
+	padding: 5px;
+	border: 1px solid #000;
+	background-color: #eee;
+	width: 620px;
+}
+
+.redirect{
+	float: right;
+	height: 50px;
+	width: 150px;
+	border-radius: 10px;
+	background: grey;
+	color: white;
+	font-size: 20px;
+	border: 1px solid #000;
+	transition-duration: 0.4s;
+}
+.redirect:hover{
+	background-color: white ;
+	color:black;
+}
+/* Numbered List Box */
+.numList{
+	text-align: center;
+	grid-area: numList;
+	margin:6px;
+	padding: 5px;
+	border: 1px solid #000;
+}
+.squareList{
+	list-style-type: square;
+}
+.soonBox{
+	grid-area: headingBox;
+	font-size: 33px;
+	padding: 5px;
+	margin: 6px;
+	border: 1px solid #000;
+	background-color: #eee;
+	text-align: center;
+	display: none;
+}
+
+/* Image Box */
+.imageBox{
+	grid-area: imageBox;
+	margin: 6px;
+	padding: 5px;
+	border: 1px solid #000;
+	background-color: #eee;
+	height: 250px;
+}
+.imageblock{
+	float:left;
+	padding-right: 5px;
+}
+figure{
+	width: 200px;
+	margin: 5px;
+	padding:5px;
+	border: 1px solid #000;
+}
+
+figcaption{
+	caption-side: bottom;
+}
+/* Footer Box */
+.footerBox{
+	grid-area: footerBox;
+	margin: 6px;
+	padding: 5px;
+	border: 1px solid #000;
+	background-color: #eee;
+	overflow-y: scroll;
+	height: 200px;
+}
