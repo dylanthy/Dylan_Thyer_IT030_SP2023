@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="This is Dylan's Midterm Project">
+	<meta name="author" content="Dylan Thyer">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<title>IT030 Midterm by Dylan Thyer</title>
+	<link href="main.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div class="page">
+	<header class="header">
+		<h1>Welcome to Dylan Thyer's Website!</h1>
+	</header>
+	<header class="greeting">
+		<div id="TimeCode">TimeComment</div>
+	</header>
+	<header class="info">
+		<h2>Info</h2>
+		<p>Hi! My name is Dylan Thyer. I am a Computer Science major at Hofstra University. I made this page to showcase my HTML, CSS, and JavaScript skills, but thats not the only thing I can do! Check my resume page to see all of my credentials, or look at my projects on this page to see what I've worked on!</p>
+	</header>
+	<nav class="navigation">
+		<h2>Menu</h2>
+		<ul>
+			<li><a href="./resume.html">Resume</a></li>
+			<li><a href="./contact.html">Contact</a></li>
+			<li><a href="./artwork.html">Artwork</a></li>
+		</ul>
+	</nav>
+	<article class="project_1">
+		<h2>Game Project</h2>
+		<p>Recently, I developed a top-down style video game, in Hofstra's CSC160, Introduction to game design. I didn't get the chance to complete the game in class, but I developed a fully functioning character controller from the ground up, implementing crouching and sprinting mechanics using C#.</p>
+		<img
+			src="./images/Game_Screenshot.png"
+			alt="pixelated screenshot of a video game. A man standing near"
+			title="Top Down game screenshot.">
+	</article>
+	<article class="project_2">
+		<h2>App Project</h2>
+		<p>I am currently working on an application for Hofstra's CSC190, Software Engineering. The idea of this app is a timer for reminding the user to water their plants. While it is still in progress, the app will be able to have plant information inputted to make it more accurate on timings.</p>
+		<img
+			src="./images/App_Screenshot.png"
+			alt="in progress screenshot of the Water Wizard Application"
+			title="Application Screenshot.">
+		<p> The current state of the app doesn't have any dynamic features. Because the application is based in Svelte HTML, I plan to add JavaScript elements next, and work on improving the visual aspects through CSS. I hope to have a working version of the web application by the end of the current semester, May 24th 2023.</p>
+	</article>
+	<article class="project_3">
+		<h2>Industrial Incense Burner</h2>
+		<p>Inspired by Professor Rodrigo Olea, who was an Industrial Design Professor at Hofstra University in the Fall of 2021, I want to stay in touch with building practical tools. I was introduced to Incense burners recently, which are a great piece of decoration. There's one problem with them though... They're too messy! There is a type of incense burner that exists where the ashes fall into a cup, rather than all over. I loved this idea, but all the existing ones cost more than $30, and are dropshipped from China. Instead, I am building my own! I found a mason jar, and a tree slice slab at a local thrift store, and glued them together. I plan to buy an alligator clip and metal wire, which will act as a clip to hold incense sticks into the cup. Once the project is complete I will be posting it here! Come back soon! </p>
+	</article>
+	<article class="project_4">
+		<h2>Thrift Store Volunteer</h2>
+		<p>For 4-5 years, I volunteered at a non-profit thrift store. I helped manage the store, as well as sort donations! It was a great time, and I got so many great thrift finds out of it!</p>
+	</article>
+	<aside class="hobbies">
+		<h2>Work Experience & Hobbies</h2>
+		<ul>
+			<li>Data Scientist at <a href="https://www.essentialdata.com">Essential Data Corporation</a></li>
+			<li>Hofstra Undergrad with a 3.7 GPA</li>
+			<li>Waiter at <a href="https://www.mbramenshop.com">MB Ramen</a> for 2 years</li>
+			<li>Skiier for 15 years</li>
+			<li>Avid computer builder</li>
+			<li>And more! Check my <a href="./resume.html">resume!</a></li>
+		</ul>
+	</aside>
+	<footer class = "footer">
+		<h2>Thank you for Visiting!</h2>
+		<p>I hope you enjoyed my website! Make sure to visit my Resume, Contact, and Art Showcase pages!</p>
+		<div id="SizeCode">SizeComment</div>
+	</footer>
+</div>
+
+<script>
+
+var hour = new Date().getHours();
+if(hour <12){var greeting ="morning";}
+else if (hour <16){var greeting ="afternoon";}
+else if (hour < 20){var greeting = "evening";}
+else{var greeting = "night";}
+if(hour > 12) {
+	hour -= 12;
+}
+var ampm = new Date().getHours();
+if (ampm > 12) {
+	ampm = "PM"
+}
+else { ampm = "AM"}
+
+var minutes = new Date().getMinutes();
+if (minutes < 10){
+	var zero = "0";
+	minutes = zero + minutes.toString();
+}
+
+document.getElementById("TimeCode").innerHTML ="Good " + greeting + "! The Current Time is is " + hour + ":" + minutes + " " +ampm;
+
+if (window.innerWidth < 576){var size = "Phone!"}
+	else if (window.innerWidth < 768){var size = "Tablet!"}
+		else{var size="Computer!"}
+document.getElementById("SizeCode").innerHTML = "You viewed my website on a " + size + " Or a screen with that size. Check out my site on other screen sizes too!";
+</script>
+</body>
