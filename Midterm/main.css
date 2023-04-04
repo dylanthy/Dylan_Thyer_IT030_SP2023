@@ -3,7 +3,7 @@
 body{
 	font-family: Montserrat, Arial, Verdana, sans-serif;
 	font-size: 12px;	
-	color: #d7dae0;
+	color: black;
 	background-color: #212224;
 }
 h1{
@@ -57,6 +57,9 @@ iframe{
 	"navigation"
 	"greeting";
 }
+ body{
+ 	color: #d7dae0;
+ }
  nav ul{
  	display:flex;
  	justify-content: space-between;
